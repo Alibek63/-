@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Jetix</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="icon" href="jetix-logo.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="jetix-logo.jpg" alt="Jetix Logo">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="cataloge.html">Каталог моделей</a></li>
+                <li><a href="extr.html">Акции и новости</a></li>
+                <li><a href="Support.html">Поддержка</a></li>
+                <li><a href="Contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="account">
+            <a href="#" class="login-btn">Вход</a>
+            <a href="#" class="register-btn">Регистрация</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog">
+            <h1>Каталог</h1>
+
+            <div class="filters">
+                <div class="features">
+                    <h2>Особенности</h2>
+                    <ul>
+                        <li><input type="checkbox" id="4g" name="4g"><label for="4g">  4G и видеозвонки</label></li>
+                        <li><input type="checkbox" id="gps" name="gps"><label for="gps">GPS навигация</label></li>
+                        <li><input type="checkbox" id="wifi" name="wifi"><label for="wifi">Wi-Fi подключение</label></li>
+                        <li><input type="checkbox" id="waterproof" name="waterproof"><label for="waterproof">Водостойкость</label></li>
+                    </ul>
+                </div>
+                <div class="age-group">
+                    <h2>Возраст</h2>
+                    <ul>
+                        <li><input type="checkbox" id="preschool" name="preschool"><label for="preschool">Дошкольники</label></li>
+                        <li><input type="checkbox" id="school" name="school"><label for="school">Школьники</label></li>
+                    </ul>
+                </div>
+                <div class="color-selection">
+                    <h2>Цвет</h2>
+                    <div class="color-options">
+                        <span class="color red" onclick="changeBackgroundColor('#ff6347')"></span>
+                        <span class="color pink" onclick="changeBackgroundColor('#ff69b4')"></span>
+                        <span class="color black" onclick="changeBackgroundColor('#333')"></span>
+                        <span class="color grey" onclick="changeBackgroundColor('#d3d3d3')"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products">
+                <div class="product">
+                    <img src="watch1.jpg" alt="JETIX QF45 (Wi-Fi)">
+                    <h3>JETIX QF45 (Wi-Fi)</h3>
+                    <p>2199 руб</p>
+                </div>
+                <div class="product">
+                    <img src="watch1.jpg" alt="JETIX QF45 (Anti Lost Edition)">
+                    <h3>JETIX QF45 (Anti Lost Edition)</h3>
+                    <p>2199 руб</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="description">
+            <h2>Смарт-часы для детей</h2>
+            <p>JETIX специализируется на продаже детских смарт-часов. Мы предлагаем лучшие решения для родителей...</p>
+        </section>
+
+        <!-- Новый блок карточек -->
+        <section class="three-cards">
+            <h2>Популярные товары</h2>
+            <div class="card-wrapper">
+                <div class="card">
+                    <img src="watch1.jpg" alt="Card 1">
+                    <p>Лучшие детские смарт-часы 2022 года</p>
+                </div>
+                <div class="card">
+                    <img src="watch1.jpg" alt="Card 2">
+                    <p>Детские смарт-часы JETIX QF45</p>
+                </div>
+                <div class="card">
+                    <img src="watch1.jpg" alt="Card 3">
+                    <p>5 лучших детских смарт-часов JETIX</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="videos">
+            <h2>Видео</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="video">
+                        <img src="video1.jpg" alt="Video 1">
+                        <p>Лучшие детские смарт-часы 2022 года</p>
+                    </div>
+                    <div class="video">
+                        <img src="video1.jpg" alt="Video 2">
+                        <p>Детские смарт-часы JETIX QF45</p>
+                    </div>
+                    <div class="video">
+                        <img src="video1.jpg" alt="Video 3">
+                        <p>5 лучших детских смарт-часов JETIX</p>
+                    </div>
+                </div>
+                <div class="controls">
+                    <label for="speedControl">Скорость (мс):</label>
+                    <input type="range" id="speedControl" min="1000" max="5000" step="500" value="3000">
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="quiz">
+            <h2>Тематическая викторина</h2>
+            <p>Проверьте свои знания о детских смарт-часах!</p>
+            <form id="quizForm">
+                <!-- Question 1 -->
+                <div class="question">
+                    <p>1. Какие функции обычно есть у детских смарт-часов?</p>
+                    <label><input type="radio" name="q1" value="a"> Видеозвонки</label><br>
+                    <label><input type="radio" name="q1" value="b"> GPS-навигация</label><br>
+                    <label><input type="radio" name="q1" value="c"> Все вышеперечисленное</label>
+                </div>
+                <!-- Question 2 -->
+                <div class="question">
+                    <p>2. Для какой возрастной группы чаще всего предназначены смарт-часы?</p>
+                    <label><input type="radio" name="q2" value="a"> Младенцы</label><br>
+                    <label><input type="radio" name="q2" value="b"> Дошкольники и школьники</label><br>
+                    <label><input type="radio" name="q2" value="c"> Пенсионеры</label>
+                </div>
+                <!-- Question 3 -->
+                <div class="question">
+                    <p>3. Что делает функция "Anti Lost"?</p>
+                    <label><input type="radio" name="q3" value="a"> Помогает найти потерянные часы</label><br>
+                    <label><input type="radio" name="q3" value="b"> Отслеживает ребенка</label><br>
+                    <label><input type="radio" name="q3" value="c"> Вызывает полицию</label>
+                </div>
+                <!-- Additional Questions (4-7) -->
+                <div class="question">
+                    <p>4. Какие цвета чаще всего используются для смарт-часов?</p>
+                    <label><input type="radio" name="q4" value="a"> Красный, розовый, черный</label><br>
+                    <label><input type="radio" name="q4" value="b"> Серебряный, золотой</label><br>
+                    <label><input type="radio" name="q4" value="c"> Любой цвет</label>
+                </div>
+                <div class="question">
+                    <p>5. Можно ли с помощью детских смарт-часов звонить?</p>
+                    <label><input type="radio" name="q5" value="a"> Да</label><br>
+                    <label><input type="radio" name="q5" value="b"> Нет</label>
+                </div>
+                <div class="question">
+                    <p>6. Какой бренд предлагает JETIX QF45?</p>
+                    <label><input type="radio" name="q6" value="a"> Samsung</label><br>
+                    <label><input type="radio" name="q6" value="b"> Jetix</label><br>
+                    <label><input type="radio" name="q6" value="c"> Apple</label>
+                </div>
+                <div class="question">
+                    <p>7. Зачем нужна водостойкость у смарт-часов?</p>
+                    <label><input type="radio" name="q7" value="a"> Для игр на пляже</label><br>
+                    <label><input type="radio" name="q7" value="b"> Для защиты в дождь</label><br>
+                    <label><input type="radio" name="q7" value="c"> Все вышеперечисленное</label>
+                </div>
+        
+                <button type="button" id="submitQuiz">Показать результат</button>
+            </form>
+            <div id="quizResult" class="result"></div>
+        </section>
+        
+        <section class="interactive-map">
+            <h2>Интерактивная карта</h2>
+            <p>Найдите ближайшие сервисные центры или магазины Jetix в вашем регионе:</p>
+            <div id="map"></div>
+        </section>
+        
+        <section class="data-visualization">
+            <h2>Данные о функциях смарт-часов</h2>
+            <p>Просмотрите распределение популярных функций детских смарт-часов:</p>
+            <div id="featuresChart"></div>
+        </section>
+        
+        <section class="animated-timeline">
+            <h2>Эволюция смарт-часов Jetix</h2>
+            <p>Ознакомьтесь с ключевыми этапами развития наших продуктов:</p>
+            <div class="timeline">
+                <div class="timeline-event">
+                    <div class="timeline-date">2015</div>
+                    <div class="timeline-content">
+                        <h3>Запуск первого продукта</h3>
+                        <p>Jetix выпустила первые детские смарт-часы с GPS для обеспечения безопасности детей.</p>
+                    </div>
+                </div>
+                <div class="timeline-event">
+                    <div class="timeline-date">2018</div>
+                    <div class="timeline-content">
+                        <h3>Добавление Wi-Fi</h3>
+                        <p>Смарт-часы Jetix стали поддерживать подключение к Wi-Fi для улучшенной функциональности.</p>
+                    </div>
+                </div>
+                <div class="timeline-event">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>Водонепроницаемость</h3>
+                        <p>Запуск моделей с улучшенной защитой от воды для активного использования.</p>
+                    </div>
+                </div>
+                <div class="timeline-event">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>Видеозвонки</h3>
+                        <p>Добавление видеозвонков в модели для общения в реальном времени.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="weather">
+            <h2>Узнайте погоду для прогулок с детьми</h2>
+            <p>Введите ваш город, чтобы узнать текущую погоду:</p>
+            <form id="weatherForm">
+                <input type="text" id="cityInput" placeholder="Например, Москва" required>
+                <button type="submit">Показать погоду</button>
+            </form>
+            <div id="weatherResult" class="weather-result">
+                <!-- Weather details will be displayed here -->
+            </div>
+        </section>
+        
+        <section class="drag-drop">
+            <h2>Соберите свои идеальные смарт-часы</h2>
+            <p>Перетащите нужные функции на изображение смарт-часов, чтобы создать свою модель:</p>
+            <div class="drag-drop-container">
+                <div class="features">
+                    <h3>Доступные функции</h3>
+                    <div class="feature" draggable="true" data-feature="GPS">GPS-навигация</div>
+                    <div class="feature" draggable="true" data-feature="Wi-Fi">Wi-Fi подключение</div>
+                    <div class="feature" draggable="true" data-feature="Waterproof">Водонепроницаемость</div>
+                    <div class="feature" draggable="true" data-feature="4G">4G и видеозвонки</div>
+                </div>
+                <div class="smartwatch-area">
+                    <h3>Ваши смарт-часы</h3>
+                    <div class="drop-zone">Перетащите функции сюда</div>
+                    <ul class="selected-features">
+                        <!-- Selected features will appear here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <p>© 2024 Jetix - Эксперт GPS часов</p>
+        <div class="social-media">
+            <a href="#"><img src="1.jpg" alt="Facebook"></a>
+            <a href="#"><img src="2.jpg" alt="Instagram"></a>
+            <a href="#"><img src="3.jpg" alt="Twitter"></a>
+        </div>
+        <div class="authors">
+            Authors: Alibek
+            <br>
+            Group: SE-2317
+        </div>
+    </footer>
+
+    <script src="apps.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивное Приложение - Jetix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="jetix-logo.jpg">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="jetix-logo.jpg" alt="Jetix Logo">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="cataloge.html">Каталог моделей</a></li>
+                <li><a href="extr.html">Акции и новости</a></li>
+                <li><a href="Support.html">Поддержка</a></li>
+                <li><a href="Contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="account">
+            <a href="#" class="login-btn">Проверить оригинальность</a>
+            <a href="#" class="register-btn">Партнерам</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Form Section -->
+        <section class="form-section">
+            <h2>Форма валидации</h2>
+            <form id="userForm">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <button type="submit" class="btn">Отправить</button>
+                <button type="button" class="btn" onclick="resetForm()">Сбросить</button>
+            </form>
+            <div id="formMessage"></div>
+        </section>
+
+        <!-- To-Do List Section -->
+        <section class="todo-section">
+            <h2>Список дел</h2>
+            <input type="text" id="taskInput" placeholder="Добавьте задачу">
+            <button class="btn" onclick="addTask()">Добавить</button>
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- Sorting Section -->
+        <section class="sorting-section">
+            <h2>Сортировка чисел</h2>
+            <input type="text" id="numbersInput" placeholder="Введите числа через запятую">
+            <button class="btn" onclick="sortNumbers(true)">По возрастанию</button>
+            <button class="btn" onclick="sortNumbers(false)">По убыванию</button>
+            <div id="sortedResult"></div>
+        </section>
+
+        <!-- Change Background Color Section -->
+        <section class="color-section">
+            <h2>Изменение цвета фона</h2>
+            <button class="btn" onclick="changeBackgroundColor()">Изменить цвет фона</button>
+        </section>
+
+        <!-- Date and Time Section -->
+        <section class="date-time-section">
+            <h2>Текущая дата и время</h2>
+            <div id="currentDateTime"></div>
+        </section>
+
+        <section class="game-section">
+            <h2>Игра: Угадай число</h2>
+            <input type="number" id="guessInput" placeholder="Число от 1 до 100">
+            <button class="btn" onclick="checkGuess()">Отправить</button>
+            <div id="guessMessage"></div>
+        </section>
+        
+        <!-- Новый блок для истории попыток -->
+        <aside class="attempts-section">
+            <h3>История попыток</h3>
+            <ul id="attemptsList"></ul>
+        </aside>
+        
+
+
+      
+        
+
+        <!-- Rating System Section -->
+        <section class="rating-section">
+            <h2>Оцените наш сервис</h2>
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </section>
+
+        <!-- Theme Toggle Section -->
+        <section class="theme-toggle-section">
+            <h2>Переключить тему</h2>
+            <button class="btn" onclick="toggleTheme()">Переключить День/Ночь</button>
+        </section>
+
+        <!-- Show Time Section -->
+        <section class="time-section">
+            <h2>Текущее время</h2>
+            <button class="btn" onclick="showCurrentTime()">Показать текущее время</button>
+            <div id="timeDisplay"></div>
+        </section>
+
+        <!-- Random Quote Section -->
+        <section class="quote-section">
+            <h2>Случайная цитата</h2>
+            <button class="btn" id="quoteButton" onclick="loadRandomQuote()">Загрузить цитату</button>
+            <div id="quoteDisplay"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="jetix-logo.jpg" alt="Jetix Logo">
+                <p>Эксперт GPS часов</p>
+            </div>
+            <ul>
+                <li><a href="#">О бренде</a></li>
+                <li><a href="#">Каталог моделей</a></li>
+                <li><a href="#">Видео</a></li>
+                <li><a href="#">Акции и новости</a></li>
+                <li><a href="#">Поддержка</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Магазин</a></li>
+                <li><a href="#">Проверить оригинальность</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#"><img src="1.jpg" alt="Facebook"></a>
+                <a href="#"><img src="2.jpg" alt="Instagram"></a>
+                <a href="#"><img src="3.jpg" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="authors">
+            Автор: Alibek<br>
+            Группа: SE-2317
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

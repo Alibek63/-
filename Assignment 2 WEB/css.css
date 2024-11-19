@@ -1,0 +1,565 @@
+/* Основные стили остаются */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav ul li {
+    margin-right: 20px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+.account a {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: 2px solid #ff0000;
+    color: #ff0000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.account a.register-btn {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.account a:hover {
+    background-color: #ffcccc;
+}
+
+.catalog {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.catalog h1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 20px;
+}
+
+
+.features, .age-group, .color-selection {
+    margin: 0 30px;
+}
+
+.features h2, .age-group h2, .color-selection h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.features ul, .age-group ul {
+    list-style: none;
+}
+
+.features ul li, .age-group ul li {
+    margin: 10px 0;
+}
+
+.color-options {
+    display: flex;
+    gap: 15px;
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color.red {
+    background-color: red;
+}
+
+.color.pink {
+    background-color: pink;
+}
+
+.color.black {
+    background-color: black;
+}
+
+.color.grey {
+    background-color: grey;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.product {
+    text-align: left;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.description {
+    padding: 100px;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.description h2 {
+    font-size: 2.5em;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.videos {
+    padding: 100px;
+    background-color: #fff;
+}
+
+.video-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.video img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .social-media a img {
+    width: 30px;
+    border-radius: 15px;
+}
+
+.three-cards {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.three-cards h2 {
+    font-size: 2.5em;
+    color: #ff0000;
+    margin-bottom: 40px;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    flex: 1;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.authors {
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.video {
+    min-width: 100%;
+    text-align: center;
+}
+
+.controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.controls input {
+    margin-left: 10px;
+    width: 200px;
+}
+.quiz {
+    padding: 40px;
+    background-color: #fff;
+    margin: 40px auto;
+    text-align: center;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+.quiz h2 {
+    font-size: 2.5em;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.quiz .question {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.quiz .question p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.quiz .result {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+/* Highlight correct answers */
+.question.correct {
+    border: 2px solid green;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e8f5e9; /* Light green background */
+}
+
+/* Highlight incorrect answers */
+.question.incorrect {
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fce4e4; /* Light red background */
+}
+
+.interactive-map {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+.interactive-map h2 {
+    font-size: 2.5em;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+.data-visualization {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+.data-visualization h2 {
+    font-size: 2.5em;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+#featuresChart {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.animated-timeline {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.animated-timeline h2 {
+    font-size: 2.5em;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    position: relative;
+    margin: 20px auto;
+    padding-left: 40px;
+    border-left: 3px solid #ff0000;
+    max-width: 600px;
+}
+
+.timeline-event {
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.timeline-event.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #ff0000;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.timeline-content {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.weather {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.weather h2 {
+    font-size: 2.5em;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+#weatherForm {
+    margin-bottom: 20px;
+}
+
+#cityInput {
+    padding: 10px;
+    width: 70%;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#weatherForm button {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#weatherForm button:hover {
+    background-color: #e60000;
+}
+
+.weather-result {
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.weather-result img {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.drag-drop {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.drag-drop h2 {
+    font-size: 2.5em;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.drag-drop-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.features, .smartwatch-area {
+    width: 45%;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.features h3, .smartwatch-area h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feature {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: grab;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.feature:active {
+    cursor: grabbing;
+}
+
+.feature:hover {
+    background-color: #ffcccc;
+}
+
+.drop-zone {
+    border: 2px dashed #ff0000;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.drop-zone.active {
+    background-color: #ffcccc;
+}
+
+.selected-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.selected-features li {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #ffcccc;
+    border-radius: 5px;
+    text-align: center;
+}
